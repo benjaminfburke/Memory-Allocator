@@ -1,6 +1,4 @@
-/* Benjamin Burke
- * Lab 1 - Malloc
- */
+
 
 #include <errno.h>
 #include <pthread.h>
@@ -201,7 +199,6 @@ static header * allocate_chunk(size_t size) {
  * @return A block satisfying the user's request
  */
 static inline header * allocate_object(size_t raw_size) {
-  // TODO implement allocation
 
   if (raw_size == 0) {
     return NULL;
@@ -466,7 +463,6 @@ static inline header * ptr_to_header(void * p) {
  * @param p The pointer returned to the user by a call to malloc
  */
 static inline void deallocate_object(void * p) {
-  // TODO implement deallocation
   if (p == NULL) {
     return;
   }
